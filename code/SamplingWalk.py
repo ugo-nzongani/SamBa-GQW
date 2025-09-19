@@ -88,6 +88,19 @@ def hamming_distance(v1, v2):
     """
     return np.sum(v1 != v2)
 
+def hamming_weight(v):
+    """
+    Computes the Hamming weight of a binary vector.
+    (i.e., the number of 1s in the vector)
+
+    Parameters:
+    - v: Numpy array of 0s and 1s.
+
+    Returns:
+    - Hamming weight of `v` (integer).
+    """
+    return np.sum(v)
+
 # XY-mixers
 
 def xy_ring_neighbors(bitvec: np.ndarray) -> list:
@@ -106,7 +119,6 @@ def xy_ring_neighbors(bitvec: np.ndarray) -> list:
             neighbors.append(bitstring_to_int(new_bitvec))
     
     return neighbors
-
 
 def uniform_superposition_hamming_range(n, k1, k2):
     """
@@ -139,7 +151,7 @@ def uniform_superposition_hamming_range(n, k1, k2):
 
     return state
 
-
+'''
 def sparse_diagonal_representation(matrix):
     rows, cols = matrix.shape
     sparse_dict = {}
@@ -151,6 +163,7 @@ def sparse_diagonal_representation(matrix):
             sparse_dict[k] = diag
 
     return sparse_dict
+'''
 
 def hypercube_adjacency_sparse_final(n):
     """

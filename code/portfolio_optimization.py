@@ -44,7 +44,7 @@ def bitstring_to_int(bits):
     return result
 
 @njit
-def compute_cost(x, lam, gamma, sigma, mu, k):
+def portfolio_cost(x, lam, gamma, sigma, mu, k):
     """
     Computes the portfolio optimization cost of a binary vector.
 
@@ -107,5 +107,5 @@ def compute_all_costs(n, lam, gamma, sigma, mu, k):
     costs = np.empty(num_assignments, dtype=np.float64)
     for i in prange(num_assignments):
         x = int_to_bitstring(i, n)
-        costs[i] = compute_cost(x, lam, gamma, sigma, mu, k)
+        costs[i] = portfolio_cost(x, lam, gamma, sigma, mu, k)
     return costs
