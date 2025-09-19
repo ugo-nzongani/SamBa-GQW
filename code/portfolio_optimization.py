@@ -50,8 +50,8 @@ def compute_cost(x, lam, gamma, sigma, mu, k):
 
     Parameters:
     - x: Binary vector.
-    - lam: First cost coefficient.
-    - gamma: Second cost coefficient.
+    - lam: Risk appetite.
+    - gamma: Penalty coefficient.
     - sigma: Covariance matrix.
     - mu: Expected return of assets.
     - k: Number of assets to select (Hamming weight of the feasible solutions).
@@ -94,8 +94,8 @@ def compute_all_costs(n, lam, gamma, sigma, mu, k):
 
     Parameters:
     - n: Total number of assets (number of qubits).
-    - lam: First cost coefficient.
-    - gamma: Second cost coefficient.
+    - lam: Risk appetite.
+    - gamma: Penalty coefficient.
     - sigma: Covariance matrix.
     - mu: Expected return of assets.
     - k: Number of assets to select (Hamming weight of the feasible solutions).
